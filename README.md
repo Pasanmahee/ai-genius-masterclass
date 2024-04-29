@@ -1,6 +1,6 @@
 ![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
 
-# Tailwind Nextjs Starter Blog
+# AI Genius MasterClass
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/)
 [![GitHub forks](https://img.shields.io/github/forks/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/network/)
@@ -24,10 +24,6 @@ Feature request? Check the past discussions to see if it has been brought up pre
 - [Demo Blog](https://tailwind-nextjs-starter-blog.vercel.app/) - this repo
 
 Using the template? Feel free to create a PR and add your blog to this list.
-
-## Examples V1
-
-[v1-blogs-showcase.webm](https://github.com/timlrx/tailwind-nextjs-starter-blog/assets/28362229/2124c81f-b99d-4431-839c-347e01a2616c)
 
 Thanks to the community of users and contributers to the template! We are no longer accepting new blog listings over here. If you have updated from version 1 to version 2, feel free to remove your blog from this list and add it to the one above.
 

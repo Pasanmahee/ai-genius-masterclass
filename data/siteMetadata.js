@@ -1,7 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title:
-    'AI Complete Guide Learn ChatGPT, Midjourney, Stable Diffusion, Notion AI, Zapier and More ',
+  title: 'Complete AI Guide: Mastering ChatGPT, Midjourney, & More',
   author: 'Pasan Maheesanda',
   headerTitle: 'AI Genius MasterClass',
   description:
@@ -18,7 +17,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/aigeniusmclass',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://linkedin.com/in/pasan-maheesanda-91968993',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

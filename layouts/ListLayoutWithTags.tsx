@@ -25,39 +25,68 @@ interface ListLayoutProps {
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const pathname = usePathname()
   const basePath = pathname.split('/')[1]
+
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
 
+  // Calculate the start and end page numbers for the current set
+  const pageBlockSize = 6
+  let currentBlockStart = Math.floor((currentPage - 1) / pageBlockSize) * pageBlockSize + 1
+  const currentBlockEnd = Math.min(currentBlockStart + pageBlockSize - 1, totalPages)
+
+  if (currentPage > currentBlockEnd) {
+    currentBlockStart = currentBlockEnd - (pageBlockSize - 1)
+  }
+
+  // Generate the list of page numbers for the current block
+  const getPageNumbers = () => {
+    const pages: number[] = []
+    for (let i = currentBlockStart; i <= currentBlockEnd; i++) {
+      pages.push(i)
+    }
+    return pages
+  }
+
   return (
     <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-      <nav className="flex justify-between">
-        {!prevPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
-            Previous
-          </button>
-        )}
-        {prevPage && (
+      <nav className="flex justify-between items-center">
+        {prevPage ? (
           <Link
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
+            className="mr-4"
           >
             Previous
           </Link>
+        ) : (
+          <span className="mr-4 text-gray-500 cursor-not-allowed">Previous</span>
         )}
+        <div className="flex gap-1">
+          {getPageNumbers().map((page) => (
+            <Link
+              key={page}
+              href={page === 1 ? `/${basePath}/` : `/${basePath}/page/${page}`}
+              className={`px-2 py-1 ${
+                currentPage === page ? 'text-blue-600 font-bold' : 'text-gray-600'
+              }`}
+            >
+              {page}
+            </Link>
+          ))}
+        </div>
+        {nextPage ? (
+          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="prev" className="mr-4">
+            Next
+          </Link>
+        ) : (
+          <span className="mr-4 text-gray-500 cursor-not-allowed">Next</span>
+        )}
+      </nav>
+      <div className="flex justify-center mt-4">
         <span>
           {currentPage} of {totalPages}
         </span>
-        {!nextPage && (
-          <button className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
-            Next
-          </button>
-        )}
-        {nextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
-            Next
-          </Link>
-        )}
-      </nav>
+      </div>
     </div>
   )
 }

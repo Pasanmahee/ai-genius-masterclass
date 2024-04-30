@@ -1,9 +1,11 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
+  title:
+    'AI Complete Guide Learn ChatGPT, Midjourney, Stable Diffusion, Notion AI, Zapier and More ',
+  author: 'Pasan Maheesanda',
   headerTitle: 'AI Genius MasterClass',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    "Explore the comprehensive world of ChatGPT and AI tools with our in-depth courses and resources. From mastering ChatGPT prompt engineering with over 150 prompting ideas, to understanding the capabilities of plugins and integrating AI into daily workflows, this site offers a wide array of tools and tips. Dive into real-world applications, learn how to use Midjourney and DALL-E 3 for image creation, and optimize your operations with AI-driven automations and tools like Notion AI, Zapier, and Google's AI suites. Whether you're gearing up for business, enhancing productivity, or exploring creative avenues, find everything you need to excel in the age of artificial intelligence.",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

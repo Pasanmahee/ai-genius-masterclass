@@ -5,17 +5,17 @@ const siteMetadata = {
   author: 'Pasan Maheesanda',
   headerTitle: 'AI Genius MasterClass',
   description:
-    "Explore the comprehensive world of ChatGPT and AI tools with our in-depth courses and resources. From mastering ChatGPT prompt engineering with over 150 prompting ideas, to understanding the capabilities of plugins and integrating AI into daily workflows, this site offers a wide array of tools and tips. Dive into real-world applications, learn how to use Midjourney and DALL-E 3 for image creation, and optimize your operations with AI-driven automations and tools like Notion AI, Zapier, and Google's AI suites. Whether you're gearing up for business, enhancing productivity, or exploring creative avenues, find everything you need to excel in the age of artificial intelligence.",
+    "Explore the comprehensive world of ChatGPT and AI tools with our in-depth courses and resources. From mastering ChatGPT prompt engineering with over 150 prompting ideas, to understanding the capabilities of plugins and integrating AI into daily workflows, this site offers a wide array of tools and tips. Dive into real-world applications, learn how to use Midjourney and DALL-E 3 for image creation, and optimize your operations with AI-driven automation and tools like Notion AI, Zapier, and Google's AI suites. Whether you're gearing up for business, enhancing productivity, or exploring creative avenues, find everything you need to excel in the age of artificial intelligence.",
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://ai-genius-masterclass.vercel.app',
+  siteRepo: 'https://github.com/Pasanmahee/ai-genius-masterclass',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
+  mastodon: 'https://mastodon.social/@aigeniusmasterclass',
+  email: 'portfoliodemo24@gmail.com',
+  github: 'https://github.com/Pasanmahee',
+  twitter: 'https://twitter.com/aigeniusmclass',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',
@@ -35,9 +35,9 @@ const siteMetadata = {
     // posthogAnalytics: {
     //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
-    // googleAnalytics: {
-    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
-    // },
+    googleAnalytics: {
+      googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID, // e.g. G-XXXXXXX
+    },
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
